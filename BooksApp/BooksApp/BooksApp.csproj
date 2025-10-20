@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BooksApp.Library.Adapters.DataAccess\BooksApp.Library.Adapters.DataAccess.csproj" />
+    <ProjectReference Include="..\BooksApp.Library.Adapters.Primary\BooksApp.Library.Adapters.Primary.csproj" />
+    <ProjectReference Include="..\BooksApp.Library.Ports.Primary\BooksApp.Library.Ports.Primary.csproj" />
+  </ItemGroup>
+
+</Project>

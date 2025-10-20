@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\BooksApp.Library.Entities\BooksApp.Library.Entities.csproj" />
+		<ProjectReference Include="..\BooksApp.Library.Ports.DataAccess\BooksApp.Library.Ports.DataAccess.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\BooksApp.Library.Domain\BooksApp.Library.Domain.csproj" />
+	</ItemGroup>
+
+</Project>
