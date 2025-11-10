@@ -5,6 +5,8 @@ using BooksApp.Library.Domain.Contexts;
 using BooksApp.Library.Domain.Contexts.Interfaces;
 using BooksApp.Library.Ports.DataAccess;
 using BooksApp.Library.Ports.Primary.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 internal class Program
 {
@@ -21,6 +23,12 @@ internal class Program
         builder.Services.AddScoped<IOverviewManager, OverviewManager>();
         builder.Services.AddScoped<IOverviewContext, OverviewContext>();
         builder.Services.AddScoped<ILibraryRepository, LibraryRepository>();
+        builder.Services.AddDbContext<LibraryDbContext>(options =>
+        {
+            options.UseSqlServer(
+                builder.Configuration.GetConnectionString("DefaultConnection"),
+                b => b.MigrationsAssembly("BooksApp.Library.Migrations"));
+        });
 
         var app = builder.Build();
 

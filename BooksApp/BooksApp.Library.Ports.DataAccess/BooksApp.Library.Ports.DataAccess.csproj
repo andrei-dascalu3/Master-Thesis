@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BooksApp.Core.Ports.DataAccess\BooksApp.Core.Ports.DataAccess.csproj" />
     <ProjectReference Include="..\BooksApp.Library.Entities\BooksApp.Library.Entities.csproj" />
   </ItemGroup>
 

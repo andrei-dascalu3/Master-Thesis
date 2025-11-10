@@ -8,4 +8,5 @@ public class Book
     public string Description { get; set; } = string.Empty;
     public DateTime PublishedDate { get; set; }
     public string ISBN { get; set; } = string.Empty;
+    public string? Subtitle { get; set; }
 }

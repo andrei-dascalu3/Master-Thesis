@@ -7,12 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BooksApp.Library.Adapters.DataAccess\BooksApp.Library.Adapters.DataAccess.csproj" />
     <ProjectReference Include="..\BooksApp.Library.Adapters.Primary\BooksApp.Library.Adapters.Primary.csproj" />
+    <ProjectReference Include="..\BooksApp.Library.Migrations\BooksApp.Library.Migrations.csproj" />
     <ProjectReference Include="..\BooksApp.Library.Ports.Primary\BooksApp.Library.Ports.Primary.csproj" />
   </ItemGroup>
 

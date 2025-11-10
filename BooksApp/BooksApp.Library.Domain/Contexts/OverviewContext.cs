@@ -15,17 +15,17 @@ public class OverviewContext : IOverviewContext
 
     public IEnumerable<Book> GetBooks()
     {
-        return libraryRepository.GetBooks();
+        return libraryRepository.Get();
     }
 
     public Book GetBook(Guid id)
     {
-        return libraryRepository.GetBook(id) ?? new Book();
+        return libraryRepository.Get(id) ?? new Book();
     }
 
     public Book AddBook(Book book)
     {
-        libraryRepository.AddBook(book);
+        libraryRepository.Add(book);
         return book;
     }
 }
